@@ -1,0 +1,27 @@
+{
+  "name": "tp-1",
+  "version": "1.0.0",
+  "description": "Primer TP para la cursada de NodeJS - UTN",
+  "keywords": [
+    "Node",
+    "OS",
+    "UTN"
+  ],
+  "homepage": "https://github.com/lbonecco88/UTN-Node#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lbonecco88/UTN-Node.git"
+  },
+  "license": "ISC",
+  "author": "lbonecco@gmail.com",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "dev": "node app.js",
+    "test": "...",
+    "start": "..."
+  },
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
+}
