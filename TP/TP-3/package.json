@@ -1,0 +1,29 @@
+{
+  "name": "tp-3",
+  "version": "1.0.0",
+  "description": "Trabajo practico 3 - MongoDB",
+  "keywords": [
+    "Node",
+    "UTN",
+    "MongoDB"
+  ],
+  "homepage": "https://github.com/lbonecco88/UTN-Node#readme",
+  "bugs": {
+    "url": "https://github.com/lbonecco88/UTN-Node/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lbonecco88/UTN-Node.git"
+  },
+  "license": "ISC",
+  "author": "lbonecco@gmail.com",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "node ./src/index.js"
+  },
+  "dependencies": {
+    "express": "^5.3.0",
+    "mongoose": "^9.12.0"
+  }
+}
