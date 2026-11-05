@@ -1,4 +1,4 @@
-# TP1 - Introducción a Node.js
+# TP3 - MongoDB
 
 ## Descripción
 
@@ -34,6 +34,22 @@ npm run dev
 | `GET`       | http://localhost:1111/users/{userId} | Get User by ID    |
 | `DELETE`    | http://localhost:1111/users/{userId} | Delete User by ID |
 
+POST Body
+
+```
+{
+    "mail": "mail@gmail.com",
+    "dni": 12345678
+}
+```
+
+PUT Body
+
+```
+{
+    "name": "Nuevo Nombre"
+}
+
 ## 🛠️ Tecnologías
 
 [Node](https://nodejs.org/es)
@@ -45,3 +61,4 @@ npm run dev
 - **Leonardo Bonecco**
 - GitHub: [@lbonecco88](https://github.com/lbonecco88)
 - Correo electrónico: lbonecco@gmail.com
+```
