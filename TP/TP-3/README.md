@@ -49,6 +49,7 @@ PUT Body
 {
     "name": "Nuevo Nombre"
 }
+```
 
 ## 🛠️ Tecnologías
 
@@ -61,4 +62,7 @@ PUT Body
 - **Leonardo Bonecco**
 - GitHub: [@lbonecco88](https://github.com/lbonecco88)
 - Correo electrónico: lbonecco@gmail.com
+
+```
+
 ```
