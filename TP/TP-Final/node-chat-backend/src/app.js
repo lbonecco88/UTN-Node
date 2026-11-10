@@ -5,6 +5,8 @@ import { connectDb } from "./db.js"
 import { notFound } from "./middlewares/notFound.js"
 import { errorHandler } from "./middlewares/errorHandler.js"
 import { userRouter } from "./routes/userRouter.js"
+import { chatRouter } from "./routes/chatRouter.js"
+import { messageRouter } from "./routes/messageRouter.js"
 
 const app = express()
 const PORT = process.env.PORT || 3000
@@ -22,6 +24,8 @@ app.get("/", (req, res) => {
 
 // Rutas de la API
 app.use("/users", userRouter)
+app.use("/chats", chatRouter)
+app.use("/messages", messageRouter)
 
 // Middlewares de errores (siempre al final)
 app.use(notFound)
