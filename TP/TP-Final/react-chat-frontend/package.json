@@ -6,6 +6,9 @@
   "author": "lbonecco@gmail.com",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=22.22"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
