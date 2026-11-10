@@ -5,10 +5,10 @@ Trabajo Final Integrador del curso _Desarrollo en Node.js_ (Centro de e-Learning
 
 El frontend que consume esta API está en [`../react-chat-frontend`](../react-chat-frontend).
 
-| | URL |
+| | URL local |
 | --- | --- |
-| API desplegada (Render) | `https://<completar>.onrender.com` |
-| Frontend desplegado (Vercel) | `https://<completar>.vercel.app` |
+| API | `http://localhost:3000` |
+| Frontend | `http://localhost:5173` |
 
 ---
 
@@ -53,7 +53,7 @@ node-chat-backend/
 
 ## Instalación y ejecución
 
-Requisitos: **Node.js 20+** y una base **MongoDB** (local o [MongoDB Atlas](https://www.mongodb.com/atlas)).
+Requisitos: **Node.js 20+** y **MongoDB** corriendo localmente (`mongodb://localhost:27017`).
 
 ```bash
 # 1. Entrar a la carpeta e instalar dependencias
@@ -79,9 +79,9 @@ Servidor escuchando en el puerto 3000
 
 | Variable | Descripción | Ejemplo |
 | --- | --- | --- |
-| `PORT` | Puerto del servidor (en Render se asigna solo) | `3000` |
+| `PORT` | Puerto del servidor | `3000` |
 | `MONGO_URI` | Cadena de conexión a MongoDB | `mongodb://localhost:27017/node_chat` |
-| `CORS_ORIGIN` | Orígenes permitidos, separados por coma. `*` permite cualquiera | `http://localhost:5173,https://mi-chat.vercel.app` |
+| `CORS_ORIGIN` | Orígenes permitidos, separados por coma. `*` permite cualquiera | `http://localhost:5173` |
 
 ## Modelo de datos
 
@@ -400,29 +400,3 @@ cd node-chat-backend && npm run dev          # http://localhost:3000
 # terminal 2
 cd react-chat-frontend && npm install && npm run dev   # http://localhost:5173
 ```
-
-## Despliegue
-
-### 1. Base de datos – MongoDB Atlas
-
-1. Crear un cluster gratuito (M0) en [MongoDB Atlas](https://www.mongodb.com/atlas).
-2. _Database Access_: crear un usuario con contraseña.
-3. _Network Access_: permitir `0.0.0.0/0` (Render no tiene IP fija en el plan gratuito).
-4. _Connect → Drivers_: copiar la cadena `mongodb+srv://...` y agregarle el nombre de la base, por ejemplo `.../node_chat?retryWrites=true&w=majority`.
-
-### 2. Backend – Render
-
-1. _New → Web Service_ y conectar el repositorio de GitHub.
-2. Configuración:
-   - **Root Directory:** `TP/TP-Final/node-chat-backend`
-   - **Runtime:** Node
-   - **Build Command:** `npm install`
-   - **Start Command:** `npm start`
-3. _Environment_: agregar `MONGO_URI` (la de Atlas) y `CORS_ORIGIN` (la URL del frontend en Vercel; mientras tanto se puede usar `*`).
-4. Deploy. Probar `GET https://<servicio>.onrender.com/` → `{ "success": true, ... }`.
-
-> En el plan gratuito Render "duerme" el servicio tras 15 minutos sin uso: la primera petición puede tardar ~1 minuto.
-
-### 3. Frontend – Vercel
-
-Ver el [README del frontend](../react-chat-frontend/README.md#despliegue-en-vercel).

@@ -50,11 +50,3 @@ src/
 ├── App.jsx                  # rutas: /, /chats, /chats/:chatId
 └── main.jsx
 ```
-
-## Despliegue en Vercel
-
-1. _Add New → Project_ e importar el repositorio de GitHub.
-2. **Root Directory:** `TP/TP-Final/react-chat-frontend` (Vercel detecta Vite solo).
-3. _Environment Variables_: `VITE_API_URL=https://<servicio>.onrender.com`.
-4. Deploy. El archivo `vercel.json` redirige todas las rutas a `index.html` para que funcione recargar en `/chats/:id`.
-5. Volver a Render y poner la URL de Vercel en `CORS_ORIGIN` del backend.
