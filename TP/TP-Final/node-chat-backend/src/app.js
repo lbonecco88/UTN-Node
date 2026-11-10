@@ -4,6 +4,7 @@ import cors from "cors"
 import { connectDb } from "./db.js"
 import { notFound } from "./middlewares/notFound.js"
 import { errorHandler } from "./middlewares/errorHandler.js"
+import { userRouter } from "./routes/userRouter.js"
 
 const app = express()
 const PORT = process.env.PORT || 3000
@@ -18,6 +19,9 @@ app.use(express.json())
 app.get("/", (req, res) => {
   res.json({ success: true, data: { status: "ok" }, message: "API de chat funcionando" })
 })
+
+// Rutas de la API
+app.use("/users", userRouter)
 
 // Middlewares de errores (siempre al final)
 app.use(notFound)
